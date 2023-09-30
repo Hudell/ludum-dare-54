@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bajatupoihyiy"]
+
+[ext_resource type="Script" path="res://source/global.gd" id="1_ke0op"]
+
+[node name="Global" type="Node"]
+script = ExtResource("1_ke0op")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

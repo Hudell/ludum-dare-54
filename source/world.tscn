@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://mjk4ing7el4q"]
+
+[ext_resource type="PackedScene" uid="uid://qn2wbnhfxtia" path="res://source/player.tscn" id="1_crcqg"]
+[ext_resource type="PackedScene" uid="uid://crrihsvvcm34e" path="res://source/person.tscn" id="2_4m0sv"]
+[ext_resource type="PackedScene" uid="uid://dlwv7w0m6mq4" path="res://source/ui.tscn" id="3_slf2g"]
+
+[node name="World" type="Node2D"]
+
+[node name="Map" type="Node2D" parent="."]
+
+[node name="Player" parent="Map" instance=ExtResource("1_crcqg")]
+position = Vector2(288, 228)
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="Map/Player"]
+limit_left = 0
+limit_top = 0
+
+[node name="Person" parent="Map" instance=ExtResource("2_4m0sv")]
+position = Vector2(604, 197)
+
+[node name="UI" parent="." instance=ExtResource("3_slf2g")]
